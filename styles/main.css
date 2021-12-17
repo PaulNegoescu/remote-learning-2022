@@ -1,0 +1,75 @@
+a:hover {
+  color: yellow;
+}
+
+input:focus {
+  background-color: red;
+}
+
+a[href^='http']::after {
+  content: url('https://en.wikipedia.org/w/resources/src/mediawiki.skinning/images/external-ltr.svg?59558');
+  display: inline-block;
+  width: 1em;
+  height: 1.05em;
+  position: relative;
+  top: 2px;
+
+  /* background-image: url('https://en.wikipedia.org/w/resources/src/mediawiki.skinning/images/external-ltr.svg?59558');
+  background-repeat: no-repeat;
+  background-position: right 0.35em; */
+
+  /* background: right 0.35em no-repeat url('https://en.wikipedia.org/w/resources/src/mediawiki.skinning/images/external-ltr.svg?59558') */
+}
+p::first-letter {
+  color: red;
+  font-size: 2em;
+}
+
+::selection {
+  background-color: #333;
+}
+
+/* p.highlight-p {
+  color: blue;
+} */
+
+.highlight-p > span {
+  color: red;
+}
+
+.highlight-span {
+  color: #bada55;
+}
+
+li + li > a {
+  color: green;
+}
+
+h1 + p {
+  color: cyan;
+}
+
+h1 ~ input {
+  background-color: black;
+}
+
+/* 
+Selectors:
+
+*                                 0
+E, ::pseudo-elemente              1
+.clasa, :pseudo-clasa, [atribut]  10
+#id                               100
+
+*/
+
+/* 
+Combinators:
+
+'' (nothing) - same element
+' ' (space) - any level descendent
+> - child (direct descendent)
++ - immediately preceding sibling
+~ - any preceding sibling
+
+*/
