@@ -1,0 +1,89 @@
+.logo {
+  color: green;
+}
+
+#my-link {
+  color: red;
+}
+
+/* a {
+  color: fuchsia;
+} */
+
+input:focus {
+  background-color: red;
+}
+
+input:disabled {
+  background-color: green;
+}
+
+[href^='http']::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+
+  background-image: url('https://en.wikipedia.org/w/resources/src/mediawiki.skinning/images/external-ltr.svg?59558');
+  background-repeat: no-repeat;
+  background-position: right center;
+  /* padding-right: 15px; */
+}
+
+/* * {
+  color: yellow;
+} */
+
+p::first-letter {
+  color: red;
+  font-size: 3em;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+li a {
+  color: lightblue;
+}
+
+nav a {
+  color: yellow;
+}
+
+li > a {
+  color: green;
+}
+
+li ~ li {
+  color: fuchsia;
+}
+
+h1 {
+  background-color: hsl(360, 100%, 50%);
+}
+
+input ~ p {
+  color: #bada55;
+}
+
+/* 
+Selectors:
+
+*                              0
+E, ::pseudo-element            1
+.class, .pseudo-class, [attr]  10
+#id                            100
+
+
+Combinators
+
+(nothing) -> same element
+' ' (space) -> any level descendent
+> -> child, direct descendent
++ -> immediately preceding sibling
+~ -> any preciding sibling
+
+*/
