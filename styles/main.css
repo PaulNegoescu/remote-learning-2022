@@ -1,22 +1,22 @@
-.logo {
+/* .logo {
   color: green;
-}
+} */
 
-#my-link {
+/* #my-link {
   color: red;
-}
+} */
 
 /* a {
   color: fuchsia;
 } */
 
-input:focus {
+/* input:focus {
   background-color: red;
 }
 
 input:disabled {
   background-color: green;
-}
+} */
 
 [href^='http']::after {
   content: '';
@@ -35,7 +35,7 @@ input:disabled {
   color: yellow;
 } */
 
-p::first-letter {
+/* p::first-letter {
   color: red;
   font-size: 3em;
 }
@@ -59,15 +59,15 @@ li > a {
 
 li ~ li {
   color: fuchsia;
-}
+} */
 
-h1 {
+/* h1 {
   background-color: hsl(360, 100%, 50%);
-}
+} */
 
-input ~ p {
+/* input ~ p {
   color: #bada55;
-}
+} */
 
 /* 
 Selectors:
@@ -87,3 +87,89 @@ Combinators
 ~ -> any preciding sibling
 
 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  width: 960px;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+.site-footer,
+.logo {
+  /* font-weight: bold; */
+  color: inherit;
+  font-size: 4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.site-header {
+  background: lightseagreen;
+  text-align: center;
+}
+
+.site-container {
+  display: flex;
+}
+
+/* 
+Clearfix -> contain the floating elements
+.site-container::after {
+  content: '';
+  display: table;
+  clear: both;
+} */
+
+.site-container > * {
+  flex: 0 0 200px;
+
+  /* float: left;
+  width: 33.33333333%; */
+}
+
+.content {
+  flex-grow: 2;
+  background: purple;
+  padding: 0 1rem;
+}
+
+.site-footer {
+  background: lightsteelblue;
+}
+
+.sidebar {
+  background: lightsalmon;
+}
+
+.main-nav {
+  background-color: blueviolet;
+}
+/* 
+main,
+nav,
+aside {
+  float: left;
+} */ ;
