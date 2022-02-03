@@ -74,3 +74,8 @@ const wrapperObj = {
 
 const inside2 = wrapperObj.fct(5);
 inside2();
+
+// Magic getters and setters
+// Constructor functions
+// class
+// prototype
