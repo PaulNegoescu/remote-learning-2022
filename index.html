@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/ajax.js" defer></script>
+  </head>
+  <body>
+    <article>
+      <h1>Counter</h1>
+      <p><output data-counter-output>0</output></p>
+      <p>
+        <button data-counter-button="dec">-</button>
+        <button data-counter-button="inc">+</button>
+      </p>
+      <p>
+        <button data-counter-button="reset">Reset</button>
+      </p>
+    </article>
+
+    <article>
+      <h1>Weather</h1>
+      <form>
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" />
+
+        <label for="country">Country: </label>
+        <select name="country" id="country">
+          <option value="RO">Romania</option>
+          <option value="DE">Germany</option>
+        </select>
+
+        <button type="submit">Go</button>
+      </form>
+      <img src="" alt="" data-weather="icon" />
+      <strong data-weather="temp"></strong>&deg; C
+      <p>
+        High: <span data-weather="temp_max"></span>&deg; C Low:
+        <span data-weather="temp_min"></span>&deg; C
+      </p>
+    </article>
+  </body>
+</html>

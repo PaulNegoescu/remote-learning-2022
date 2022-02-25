@@ -1,0 +1,12 @@
+{
+  "users": [],
+
+  "todos": [
+    {
+      "id": 1,
+      "content": "Buy milk",
+      "completed": false,
+      "userId": 1
+    }
+  ]
+}
