@@ -1,12 +1,29 @@
 {
-  "users": [],
-
-  "todos": [
+  "users": [
     {
       "id": 1,
-      "content": "Buy milk",
+      "email": "p@p.com",
+      "password": "parola"
+    }
+  ],
+  "todos": [
+    {
+      "userId": 1,
+      "content": "another item",
       "completed": false,
-      "userId": 1
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "content": "another item 2 3",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "content": "dsadas",
+      "completed": true,
+      "id": 5
     }
   ]
 }

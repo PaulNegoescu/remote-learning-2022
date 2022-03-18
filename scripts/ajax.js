@@ -18,7 +18,10 @@ async function weather() {
   )
     .then(handleFetchResponse)
     .catch(console.warn);
+  displayWeatherData(data);
+}
 
+function displayWeatherData(data) {
   const elems = document.querySelectorAll('[data-weather]');
   for (const elem of elems) {
     if (elem.dataset.weather === 'icon') {
@@ -27,7 +30,30 @@ async function weather() {
     }
     elem.innerText = (data.main[elem.dataset.weather] - 273.15).toFixed(1);
   }
-  console.log(data);
 }
 
-weather();
+navigator.geolocation.getCurrentPosition(handleLocationUpdate, console.warn);
+
+function handleLocationUpdate(data) {
+  getWeatherByGeo(data.coords.latitude, data.coords.longitude);
+}
+
+async function getWeatherByGeo(lat, lon) {
+  const data = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=926472c73ad8d9cf097a3d5e9e7d7bb2`
+  )
+    .then(handleFetchResponse)
+    .catch(console.warn);
+
+  displayWeatherData(data);
+
+  const form = document.querySelector('[data-weather-form]');
+  form.city.value = data.name;
+  for (const option of form.country.children) {
+    if (option.value === data.sys.country) {
+      option.selected = true;
+    }
+  }
+}
+
+// weather();

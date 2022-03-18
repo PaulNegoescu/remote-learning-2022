@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "json-server-auth -p 3005 --watch db.json"
+    "start": "json-server -p 3005 --watch db.json"
   },
   "devDependencies": {
     "json-server": "^0.17.0",
